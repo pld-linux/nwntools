@@ -11,6 +11,7 @@ Source0:	http://osdn.dl.sourceforge.net/openknights/%{name}-%{version}.tar.bz2
 URL:		http://www.torlack.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	cocom-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
