@@ -8,6 +8,7 @@ Group:		Applications/Games
 #Source0:	http://www.torlack.com/nwntools/%{name}-%{version}.tar.gz
 Source0:	http://osdn.dl.sourceforge.net/openknights/%{name}-%{version}.tar.bz2
 # Source0-md5:	c7664eabf3d2ecdaaa1bb4b96e58eeea
+Patch0:		%{name}-nowxWindows.patch
 URL:		http://www.torlack.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -22,6 +23,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %prep
 %setup -q
+
+%patch0 -p1
 
 %build
 %{__aclocal}
