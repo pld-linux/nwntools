@@ -8,9 +8,9 @@ Group:		Games
 Group(pl):	Gry
 Source0:	http://www.torlack.com/nwtools/%{name}-%{version}.tar.gz
 # Source0-md5:	9c8f809bf40b7c382b10d8aba08fc9d2
-#BuildRequires:
-#Requires:
 URL:		http://www.torlack.com/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -22,26 +22,24 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %prep
 %setup -q
 
-#%patch
-
 %build
 %{__aclocal}
 %{__autoheader}
 %{__automake}
 %{__autoconf}
-%{configure}
-%{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
+%configure
+%{__make} \
+	RPM_OPT_FLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
 
-%post
-%postun
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_bindir}/*
+%attr(755,root,root) %{_bindir}/*
