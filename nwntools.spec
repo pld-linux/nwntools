@@ -3,7 +3,7 @@ Summary(pl):	Narzêdzia dla NWN
 Name:		nwntools
 Version:	2.1.0
 Release:	1
-License:	GPL
+License:	BSD
 Group:		Applications/Games
 #Source0:	http://www.torlack.com/nwntools/%{name}-%{version}.tar.gz
 Source0:	http://osdn.dl.sourceforge.net/openknights/%{name}-%{version}.tar.bz2
@@ -16,14 +16,21 @@ BuildRequires:	cocom-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-- -- empty --
+NWN Tools contain the following programs:
+- NWN Explorer
+- NWN Treasure Editor
+- NWN Model Compiler
+- NWN Script Compiler
 
 %description -l pl
-- -- pusty --
+Pakiet NWN Tools zawiera nastêpuj±ce programy:
+- NWN Explorer
+- NWN Treasure Editor (edytor skarbów)
+- NWN Model Compiler (kompilator modeli)
+- NWN Script Compiler (kompilator skryptów)
 
 %prep
 %setup -q
-
 %patch0 -p1
 
 %build
@@ -32,8 +39,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %{__automake}
 %{__autoconf}
 %configure
-%{__make} \
-	RPM_OPT_FLAGS="%{rpmcflags}"
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -46,4 +52,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc AUTHORS COPYING NEWS README-1.2.html
 %attr(755,root,root) %{_bindir}/*
