@@ -1,11 +1,10 @@
 Summary:	NWN Tools
-Summary(pl):	NWN Tools
+Summary(pl):	Narzêdzia dla NWN
 Name:		nwntools
 Version:	1.2
 Release:	1
 License:	GPL
 Group:		Games
-Group(pl):	Gry
 Source0:	http://www.torlack.com/nwntools/%{name}-%{version}.tar.gz
 # Source0-md5:	9c8f809bf40b7c382b10d8aba08fc9d2
 URL:		http://www.torlack.com/
