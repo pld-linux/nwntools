@@ -1,0 +1,45 @@
+diff -Nur nwntools-2.1.0.org/configure.ac nwntools-2.1.0/configure.ac
+--- nwntools-2.1.0.org/configure.ac	2004-05-15 21:20:18.000000000 +0200
++++ nwntools-2.1.0/configure.ac	2004-06-17 09:35:02.000000000 +0200
+@@ -32,19 +32,19 @@
+ AC_CHECK_PROG(RPMBUILD, [rpmbuild], [rpmbuild])
+ AM_CONDITIONAL(RPMBUILD, [test -n "$RPMBUILD"])
+ 
+-AM_OPTIONS_WXCONFIG
+-AM_PATH_WXCONFIG(2.3.4, [wxwin=1])
+-if test "$wxwin" != 1 ; then
+-	AC_MSG_ERROR([
+-		wxWindows must be installed on your system
+-		but wx-config script couldn't be found.
+-
+-		Please check that wx-config is in path, the directory
+-		where wxWindows libraries are installed (returned by
+-		'wx-config --libs' command) is in LD_LIBRARY_PATH or
+-		equivalent variable and wxWindows version is 2.3.4 or above.
+-	])
+-fi
++#AM_OPTIONS_WXCONFIG
++#AM_PATH_WXCONFIG(2.3.4, [wxwin=1])
++#if test "$wxwin" != 1 ; then
++#	AC_MSG_ERROR([
++#		wxWindows must be installed on your system
++#		but wx-config script couldn't be found.
++#
++#		Please check that wx-config is in path, the directory
++#		where wxWindows libraries are installed (returned by
++#		'wx-config --libs' command) is in LD_LIBRARY_PATH or
++#		equivalent variable and wxWindows version is 2.3.4 or above.
++#	])
++#fi
+ 
+ # Checks for libraries.
+ 
+@@ -77,7 +77,6 @@
+                  Makefile
+ 		 nwntools.spec
+                  nwnnsscomp/Makefile
+-                 nwnmdlcomp/Makefile
+-                 wxnwntreasure/Makefile])
++                 nwnmdlcomp/Makefile])
+ AC_OUTPUT
+ 
