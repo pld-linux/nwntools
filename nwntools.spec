@@ -11,7 +11,7 @@ Source0:	http://www.torlack.com/nwtools/%{name}-%{version}.tar.gz
 #BuildRequires:
 #Requires:
 URL:		http://www.torlack.com/
-Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 - -- empty --
