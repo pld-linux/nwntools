@@ -1,13 +1,13 @@
 Summary:	NWN Tools
 Summary(pl):	Narzêdzia dla NWN
 Name:		nwntools
-Version:	2.1.0
+Version:	2.3.1
 Release:	1
 License:	BSD
 Group:		Applications/Games
 #Source0:	http://www.torlack.com/nwntools/%{name}-%{version}.tar.gz
-Source0:	http://dl.sourceforge.net/openknights/%{name}-%{version}.tar.bz2
-# Source0-md5:	c7664eabf3d2ecdaaa1bb4b96e58eeea
+Source0:	http://dl.sourceforge.net/openknights/%{name}-%{version}.tar.gz
+# Source0-md5:	aafcb30d8fd4fbc2cb0e7ce9cd18d1f1
 Patch0:		%{name}-nowxWindows.patch
 URL:		http://www.torlack.com/
 BuildRequires:	autoconf
@@ -31,7 +31,7 @@ Pakiet NWN Tools zawiera nastêpuj±ce programy:
 
 %prep
 %setup -q
-%patch0 -p1
+#patch0 -p1
 
 %build
 %{__aclocal}
