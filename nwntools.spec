@@ -1,5 +1,5 @@
 Summary:	NWN Tools
-Summary(pl):	Narzêdzia dla NWN
+Summary(pl.UTF-8):   NarzÄ™dzia dla NWN
 Name:		nwntools
 Version:	2.3.2
 Release:	1
@@ -22,12 +22,12 @@ NWN Tools contain the following programs:
 - NWN Model Compiler
 - NWN Script Compiler
 
-%description -l pl
-Pakiet NWN Tools zawiera nastêpuj±ce programy:
+%description -l pl.UTF-8
+Pakiet NWN Tools zawiera nastÄ™pujÄ…ce programy:
 - NWN Explorer
-- NWN Treasure Editor (edytor skarbów)
+- NWN Treasure Editor (edytor skarbÃ³w)
 - NWN Model Compiler (kompilator modeli)
-- NWN Script Compiler (kompilator skryptów)
+- NWN Script Compiler (kompilator skryptÃ³w)
 
 %prep
 %setup -q
