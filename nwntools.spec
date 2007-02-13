@@ -1,5 +1,5 @@
 Summary:	NWN Tools
-Summary(pl.UTF-8):   Narzędzia dla NWN
+Summary(pl.UTF-8):	Narzędzia dla NWN
 Name:		nwntools
 Version:	2.3.2
 Release:	1
